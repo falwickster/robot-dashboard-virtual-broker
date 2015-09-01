@@ -7,15 +7,14 @@ client.on('connect', function () {
   client.subscribe("Gripper/MoveCurrent");
   client.subscribe("Gripper/RotateCurrent");
   client.subscribe("Gripper/RotatePosition");
-  client.subscribe("Gripper/Voltage") //Napięcie które mamy zmierzyć podczas zadania;
+  client.subscribe("Gripper/Voltage"); //Napięcie które mamy zmierzyć podczas zadania;
   client.subscribe("Arm/BarkCurrent");
   client.subscribe("Arm/BarkPosition");
   client.subscribe("Arm/LokiecCurrent");
   client.subscribe("Arm/LokiecPosition");
   client.subscribe("Arm/ObrotCurrent");
   client.subscribe("Arm/ObrotPosition");
-  client.subscribe("GpsUSB/LatitudeDMS");
-  client.subscribe("GpsUSB/LongitudeDMS");
+
   client.subscribe("GpsUSB/LatitudeDD");
   client.subscribe("GpsUSB/LongitudeDD");
   client.subscribe("GpsUSB/Track");
@@ -29,7 +28,7 @@ client.on('connect', function () {
 
   client.subscribe("Chassis/AkuMot"); //Subskrybowanie tematu z napieciem akumulatora silników
   client.subscribe("Chassis/AkuEle"); //Subskrybowanie tematu z napieciem akumulatora elektroniki
-	
+		
   
 client.on('message', function (topic, message) {
   console.log(message.toString());
