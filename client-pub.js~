@@ -41,9 +41,4 @@ client.publish("Gripper/Voltage", "0V");
   client.publish("GpsUSB/LongitudeDD", "42");
   client.publish("GpsUSB/Track", "1200");
   client.publish("GpsUSB/Speed", "231");
-
-// statusy akumulatora i elektroniki
-  client.publish("Chassis/AkuMot", "12 V");
-  client.publish("Chassis/AkuEle", "4.5 V");
-	
 });

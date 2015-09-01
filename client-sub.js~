@@ -2,7 +2,7 @@ var mqtt    = require('mqtt');
 var client  = mqtt.connect('mqtt://localhost');
 
 client.on('connect', function () {
-  client.subscribe('presence'); //test brokera
+  client.subscribe('presence');
   client.subscribe("Gripper/GripperCurrent");
   client.subscribe("Gripper/MoveCurrent");
   client.subscribe("Gripper/RotateCurrent");
