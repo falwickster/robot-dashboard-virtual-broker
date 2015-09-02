@@ -47,13 +47,13 @@ setInterval(function() {
 
 //statusy ramienia
 setInterval(function() {
-    client.publish("Arm/BarkCurrent", getRandomIntInRange(0,20).toString()+'V',{retain: false, qa: 1});
+    client.publish("Arm/BarkCurrent", getRandomIntInRange(0,20).toString(),{retain: false, qa: 1});
   }, 5000);  
 setInterval(function() {
     client.publish("Arm/BarkPosition", getRandomIntInRange(0,20).toString(),{retain: false, qa: 1});
   }, 5000);  
 setInterval(function() {
-    client.publish("Arm/LokiecCurrent", getRandomIntInRange(0,20).toString()+'A',{retain: false, qa: 1});
+    client.publish("Arm/LokiecCurrent", getRandomIntInRange(0,20).toString(),{retain: false, qa: 1});
   }, 5000);  
 setInterval(function() {
     client.publish("Arm/LokiecPosition", getRandomIntInRange(0,20).toString(),{retain: false, qa: 1});
@@ -81,9 +81,9 @@ setInterval(function() {
 
 // statusy akumulatora i elektroniki
 setInterval(function() {
-    client.publish("Chassis/AkuMot", getRandomIntInRange(0,20).toString()+'V',{retain: false, qa: 1});
-  }, 5000);
+    client.publish("Chassis/AkuMot", getRandomIntInRange(0,101).toString(),{retain: false, qa: 1});
+  }, 1000);
 setInterval(function() {
-    client.publish("Chassis/AkuEle", getRandomIntInRange(0,20).toString()+'V',{retain: false, qa: 1});	
-}, 5000);
+    client.publish("Chassis/AkuEle", getRandomIntInRange(0,101).toString(),{retain: false, qa: 1});	
+}, 1000);
 });
